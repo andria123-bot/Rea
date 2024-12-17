@@ -1,0 +1,117 @@
+/* Add overlay for blur effect */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  z-index: 999; /* Ensure it stays above the main content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center the cart modal on the screen */
+.cart {
+  position: relative; /* Ensure it's positioned within the overlay */
+  z-index: 1000; /* Keep it above the blurred background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(66, 66, 66);
+  border: 1px solid rgb(39, 39, 39);
+  border-radius: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 600px;
+  padding: 20px;
+}
+
+/* Existing styles */
+.cart h2 {
+  color: rgb(255, 166, 0);
+  margin-bottom: 10px;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.cart li {
+  color: rgb(1, 255, 242);
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart li:last-child {
+  border-bottom: none;
+}
+
+.cart p {
+  color: rgb(238, 255, 0);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cart-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cart-buttons button {
+  background-color: rgb(30, 30, 30);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-buttons button.clear:hover {
+  background-color: rgb(204, 0, 0);
+}
+
+.remove-btn:hover {
+  background-color: rgb(204, 0, 0);
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(50, 255, 245);
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart button {
+  cursor: pointer;
+  background-color: rgb(143, 143, 143);
+  border: 0.1px solid black;
+  border-radius: 5px;
+}
+
+.cart button:hover {
+  background-color: rgb(204, 0, 0);
+  transition: background-color 0.3s ease;
+}
+
+.cart-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
